@@ -11,5 +11,3 @@ services:
     restart: always
     volumes:
       - ./www:/var/www/html
-    links:
-      - mysql-server
