@@ -1,4 +1,4 @@
-## Create Docker with Apache/PHP Vue App
+## Create Docker with Apache/PHP for Vue App
 
 * Edit **.env** file with your settings
 
