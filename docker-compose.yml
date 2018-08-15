@@ -3,7 +3,7 @@ version: '2'
 services:
 
   apache-server:
-    image: apps4net/vue-apache:1.0
+    image: apps4net/vue-apache:1.1
 #    image: apache
     ports:
       - ${APP_PORT}
