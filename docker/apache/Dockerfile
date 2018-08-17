@@ -3,14 +3,13 @@ MAINTAINER rocean <rocean74@gmail.com>
 
 # Install apache, PHP, and supplimentary programs
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    apache2 php7.2 php7.2-mysql libapache2-mod-php7.2 curl lynx-common \
-    php-xml php7.2-gd php-curl php7.2-mbstring python nano git \
+    apache2 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Enable apache mods.
-RUN a2enmod php7.2
 RUN a2enmod rewrite
+RUN a2enmod expires
 
 # Update the PHP.ini file, enable <? ?> tags and quieten logging.
 #RUN sed -i "s/short_open_tag = Off/short_open_tag = On/" /etc/php/7.0/apache2/php.ini
