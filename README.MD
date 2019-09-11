@@ -4,7 +4,7 @@
 
 * Run 
 ```
-docker-compose up -d
+docker-compose build & docker-compose up -d
 ```
 
 * **/www** folder will be created
