@@ -3,7 +3,9 @@ version: '2'
 services:
 
   apache-server:
-    image: apps4net/vue-apache:1.4
+    build:
+      context: ./docker/apache
+    #image: apps4net/vue-apache:1.4
 #    image: apache
     ports:
       - ${APP_PORT}
